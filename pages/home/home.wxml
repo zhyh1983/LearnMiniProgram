@@ -1,5 +1,10 @@
 <!--pages/home/home.wxml-->
-<text>你好</text>
-<button size='mini'> 按钮 </button>
-<view> 1.知识点1</view>
-<view> 哈哈</view>
+<!--1.小程序的数据绑定：{{}}  -> Mustache 引用 js文件的数据变量-->
+<view>hello {{name}}</view>
+<view>我的年龄是：{{age}}</view>
+<!--2.列表展示   wx:for -->
+<view wx:for="{{students}}"> {{item.name}}-{{item.age}}-{{item.id}}</view>
+<!-- 3. 事件监听改变data -->
+<view>当前计数：{{counter}}</view>
+<button size='mini' bindtap=''>+</button>
+<button size='mini' bindtap=''>-</button>
